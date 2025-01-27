@@ -22,6 +22,7 @@ assert count_words("hello world"), (
     "Python console: 'hello world'.split(' ')"
 )
 
+
 assert reverse_string("hello") == "olleh", (
     "Implement a function that takes a string "
     "and returns it reversed. For example, 'hello' becomes 'olleh'."

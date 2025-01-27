@@ -25,3 +25,4 @@ Se esegui il file [`crash.py`](crash.py) accade un errore strano...
 
 Usa il debugger per capire cosa sta succedendo e tenta di fare passare
 l'unico controllo `assert`.
+
