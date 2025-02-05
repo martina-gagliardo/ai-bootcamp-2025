@@ -1,3 +1,4 @@
+import datetime
 import sqlite3
 
 conn = sqlite3.connect("my.db")
@@ -14,8 +15,8 @@ cur.execute(
 conn.commit()
 
 cur.execute(
-    "INSERT INTO users (name, age) VALUES (?, ?)",
-    ('Alice', 25)
+    "INSERT INTO users (name, age, created) VALUES (?, ?, ?)",
+    ('Alice', 25, datetime.datetime.now() - datetime.timedelta(days=7))
 )
 conn.commit()
 
@@ -28,7 +29,6 @@ cur.execute('''UPDATE users
 SET age = '99' 
 WHERE id = 1
 ''')
-conn.commit()
 
 #cur.execute("DELETE FROM users WHERE name = ?", ('Alice', ))
 #conn.commit()
